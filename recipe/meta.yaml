@@ -1,18 +1,18 @@
 {% set name = "snowflake-sqlalchemy" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 7112829563c16109fe3cfeb336c9628a7a0e041b02718a843660c89a2825e601
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3f4c01f9337cf7c5f8e72e3a23b3156607d0f8a8372a9d163e75717e361dfcbb
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,11 +33,11 @@ test:
     - python -m pip check
 
 about:
-  home: "https://github.com/snowflakedb/snowflake-sqlalchemy"
+  home: https://github.com/snowflakedb/snowflake-sqlalchemy
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE.txt
-  summary: "Snowflake SQLAlchemy Dialect"
+  summary: Snowflake SQLAlchemy Dialect
 
 extra:
   recipe-maintainers:
