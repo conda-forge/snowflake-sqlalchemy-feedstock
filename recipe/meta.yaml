@@ -10,7 +10,7 @@ source:
   sha256: f7c220db11c1abf3df67177fbcf0ea58d33d8531963f2d5df5f09fdac09b912f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,8 +21,8 @@ requirements:
     - setuptools
   run:
     - python >=3.6
-    - snowflake-connector-python <3
-    - sqlalchemy <2
+    - snowflake-connector-python <3.0.0
+    - sqlalchemy >=1.4.0,<2.0.0
 
 test:
   imports:
@@ -42,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - xhochy
+    - xylar
