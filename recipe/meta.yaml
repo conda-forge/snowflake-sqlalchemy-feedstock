@@ -10,7 +10,7 @@ source:
   sha256: cca58341277c1b51fe1053181c7495c80b4937167afb3d6b9044a2e5db15a557
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - importlib-metadata
     - snowflake-connector-python <3.0.0
-    - sqlalchemy >=1.4.0,<2.0.0
+    - sqlalchemy >=1.4.0,<1.4.42
 
 test:
   imports:
