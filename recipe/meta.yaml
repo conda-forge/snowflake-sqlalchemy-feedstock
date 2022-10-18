@@ -1,5 +1,5 @@
 {% set name = "snowflake-sqlalchemy" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cca58341277c1b51fe1053181c7495c80b4937167afb3d6b9044a2e5db15a557
+  sha256: b019e4cedc6a4f3ecc434798be402f6163e88f1072e9e935a99c4ca692d34cce
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - importlib-metadata
     - snowflake-connector-python <3.0.0
-    - sqlalchemy >=1.4.0,<1.4.42
+    - sqlalchemy >=1.4.0,<2.0.0
 
 test:
   imports:
