@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - importlib-metadata
     - snowflake-connector-python <3.0.0
-    - sqlalchemy >=1.4.0,<1.4.42
+    - sqlalchemy >=1.4.0,<2.0.0
 
 test:
   imports:
