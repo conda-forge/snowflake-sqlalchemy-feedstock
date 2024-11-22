@@ -3,7 +3,6 @@ github:
   branch_name: main
   tooling_branch_name: main
 bot:
-  automerge: true
   inspection: update-grayskull
 conda_build:
   pkg_format: '2'
