@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/12/2b/f23dc1e8187275d970c7c4461683f8ac17ba07b3a04127f3f52793d6a4b8/snowflake_sqlalchemy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/snowflake_sqlalchemy-{{ version }}.tar.gz
   sha256: a06b78d8b83ca74318e6fbb2982b9fbd9ce99e202f502c1f6af7ba69d05da1f5
 
 build:
