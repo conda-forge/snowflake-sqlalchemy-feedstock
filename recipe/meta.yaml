@@ -1,5 +1,5 @@
 {% set name = "snowflake-sqlalchemy" %}
-{% set version = "1.7.3" %}
+{% set version = "1.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/snowflake_sqlalchemy-{{ version }}.tar.gz
-  sha256: 2ed993b1d000421c636938f8a8252516cbee4cf9fae12ea34fd70523168d8d98
+  sha256: a509ca0f11c5b19a242157189ad20a3ee9598aa391fcbac3ae3e6cf53251a6cb
 
 build:
   number: 0
