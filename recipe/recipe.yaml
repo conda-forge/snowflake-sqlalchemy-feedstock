@@ -31,13 +31,8 @@ tests:
   - python:
       imports:
         - snowflake.sqlalchemy
+      pip_check: true
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-        - pip
-    script:
-      - python -m pip check
 
 about:
   license: Apache-2.0
