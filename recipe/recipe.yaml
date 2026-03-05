@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  name: snowflake-sqlalchemy
+  version: 1.9.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/snowflake_sqlalchemy-${{ version }}.tar.gz
+  sha256: fb32baf559f7f933ae8fde2ec535bcea5381bb15188777cd8c006b3226efa3b1
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - snowflake-connector-python <5.0.0
+    - sqlalchemy >=1.4.19
+
+tests:
+  - python:
+      imports:
+        - snowflake.sqlalchemy
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  summary: Snowflake SQLAlchemy Dialect
+  homepage: https://github.com/snowflakedb/snowflake-sqlalchemy
+
+extra:
+  recipe-maintainers:
+    - xhochy
+    - xylar
