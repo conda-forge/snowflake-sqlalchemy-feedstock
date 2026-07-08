@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: snowflake-sqlalchemy
-  version: "1.10.2"
+  version: "1.11.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/snowflake_sqlalchemy-${{ version }}.tar.gz
-  sha256: 084c51e38bdf700ce988e807fd7e24455a4e421bee4866574ebe0ba0895ecdd6
+  sha256: 95866fe499a8ba692f01eb107741050efc553361e1674e3e44ea4a890b4df00c
 
 build:
   number: 0
