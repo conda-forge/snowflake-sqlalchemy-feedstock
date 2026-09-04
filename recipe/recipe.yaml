@@ -20,19 +20,21 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling
     - pip
+    - hatchling
   run:
     - python >=${{ python_min }}
-    - snowflake-connector-python <5.0.0
     - sqlalchemy >=1.4.19
+    - snowflake-connector-python <5.0.0
 
 tests:
   - python:
       imports:
         - snowflake.sqlalchemy
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: Apache-2.0
