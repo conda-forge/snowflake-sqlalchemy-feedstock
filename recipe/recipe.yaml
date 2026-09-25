@@ -24,7 +24,7 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - sqlalchemy >=1.4.19, <2.1
+    - sqlalchemy >=1.4.19,<2.1
     - snowflake-connector-python <5.0.0
 
 tests:
