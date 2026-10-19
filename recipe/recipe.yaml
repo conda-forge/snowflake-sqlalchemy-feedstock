@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: snowflake-sqlalchemy
-  version: "1.11.1"
+  version: 2.0.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/snowflake_sqlalchemy-${{ version }}.tar.gz
-  sha256: 942b203de0404b79550c4098ca851aee2b0b22f695426b073e58d71772e38d51
+  sha256: d80bfaf9ac7942aec46df951fb76552089114e7299227895746ea6da98830342
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -24,9 +24,8 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - sqlalchemy >=1.4.19,<2.1
-    - snowflake-connector-python <5.0.0
-
+    - sqlalchemy >=2.0.44,<2.1
+    - snowflake-connector-python >=5.0.0
 tests:
   - python:
       imports:
@@ -34,7 +33,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   license: Apache-2.0
